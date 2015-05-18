@@ -1,0 +1,16 @@
+
+
+I have the same complaint found in this locked post: https://productforums.google.com/forum/#!topic/chrome/RH_ZGdRfwcI. I tried the solutions posted there and NONE of them work.
+
+The issue is, I logged on to Chrome at school on various student computers and one of the professor's computers in our classroom. The next time we had class, the professors logged in, opened Chrome, and there was all of MY information, bookmarks, save passwords, etc. 
+
+I don't have admin priveleges to any of these computers - just my home computer - so I can't 
+
+Google Chrome	42.0.2311.135 (Official Build) m (32-bit)
+Revision	4e7063b6f4e912e3cb334f7feadf29ea49a29cab-refs/branch-heads/2311@{#506}
+OS	Windows 
+Blink	537.36 (@194530)
+JavaScript	V8 4.2.77.18
+Flash	17.0.0.169
+User Agent	Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36
+Command Line	"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --no-startup-window --flag-switches-begin --manual-enhanced-bookmarks --flag-switches-end

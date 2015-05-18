@@ -28,6 +28,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,20 +39,23 @@ namespace DoublyLinkedList_JBrown
     {
         static void Main(string[] args)
         {
+            int numNodes = 10;
             Random randNum = new Random();
             LinkedList<int> linked = new LinkedList<int>();
 
-            for (int count = 0; count < 10; count++)
+            for (int count = 0; count < numNodes; count++)
             {
                 linked.AddLast(randNum.Next(1, 100));
             }
 
             Console.WriteLine("******************");
 
+            var s1 = Stopwatch.StartNew();
             foreach (var item in linked)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(" Item Value: {0}", item);
             }
+            s1.Stop();
 
 
             Console.WriteLine("******************");
@@ -60,7 +64,8 @@ namespace DoublyLinkedList_JBrown
             linked.RemoveFirst();
             Console.WriteLine("******************");
             Console.WriteLine("> First element is NOW: {0}", linked.ElementAt(0));
-            Console.WriteLine("******************");
+            Console.WriteLine("******************"); 
+            Console.WriteLine(((double)(s1.Elapsed.TotalMilliseconds * 1000000) / numNodes).ToString("0.00 ns"));
         }
     }
 }

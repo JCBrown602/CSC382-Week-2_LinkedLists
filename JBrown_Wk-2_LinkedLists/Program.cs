@@ -40,18 +40,21 @@ namespace DoublyLinkedList_JBrown
         static void Main(string[] args)
         {
             int numNodes = 10;
+            int itemToRemove = 0;
             Random randNum = new Random();
-            LinkedList<int> linked = new LinkedList<int>();
+            List<int> myList = new List<int>();
 
             for (int count = 0; count < numNodes; count++)
             {
-                linked.AddLast(randNum.Next(1, 100));
+                myList.Add(randNum.Next(1, 100));
             }
 
             Console.WriteLine("******************");
 
             var s1 = Stopwatch.StartNew();
-            foreach (var item in linked)
+
+            myList.Sort();
+            foreach (var item in myList)
             {
                 Console.WriteLine(" Item Value: {0}", item);
             }
@@ -59,13 +62,33 @@ namespace DoublyLinkedList_JBrown
 
 
             Console.WriteLine("******************");
-            Console.WriteLine("> First element is: {0}", linked.ElementAt(0));
+            Console.WriteLine("> First element is: {0}", myList.ElementAt(0));
             Console.WriteLine("******************");
-            linked.RemoveFirst();
+
+            itemToRemove = myList.ElementAt(0);
+            myList.Remove(itemToRemove);
             Console.WriteLine("******************");
-            Console.WriteLine("> First element is NOW: {0}", linked.ElementAt(0));
-            Console.WriteLine("******************"); 
+            Console.WriteLine("> First element is NOW: {0}", myList.ElementAt(0));
+            Console.WriteLine("******************");
+
             Console.WriteLine(((double)(s1.Elapsed.TotalMilliseconds * 1000000) / numNodes).ToString("0.00 ns"));
+            
+            Console.WriteLine("******************");
+            Console.WriteLine("> Sorted list: ");
+
+            foreach (var item in myList)
+            {
+                Console.WriteLine(" Item Value: {0}", item);
+            }
+            Console.WriteLine("******************"); 
+
+            Console.WriteLine("******************");
+            Console.WriteLine("> Max element is: {0}", myList.Max());
+            Console.WriteLine("******************");
+
+            Console.WriteLine("******************");
+            Console.WriteLine("> Min element is: {0}", myList.Min());
+            Console.WriteLine("******************"); 
         }
     }
 }

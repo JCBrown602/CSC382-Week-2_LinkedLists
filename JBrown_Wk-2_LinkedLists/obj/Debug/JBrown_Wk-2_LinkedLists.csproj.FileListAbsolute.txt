@@ -10,3 +10,9 @@ C:\Users\jasbrown\Desktop\JBrown_Week-2_LinkedLists\trunk\JBrown_Wk-2_LinkedList
 C:\Users\jasbrown\Desktop\JBrown_Week-2_LinkedLists\trunk\JBrown_Wk-2_LinkedLists\bin\Debug\JBrown_Wk-2_LinkedLists.exe
 C:\Users\jasbrown\Desktop\JBrown_Week-2_LinkedLists\trunk\JBrown_Wk-2_LinkedLists\bin\Debug\JBrown_Wk-2_LinkedLists.pdb
 C:\Users\jasbrown\Desktop\JBrown_Week-2_LinkedLists\trunk\JBrown_Wk-2_LinkedLists\obj\Debug\JBrown_Wk-2_LinkedLists.csprojResolveAssemblyReference.cache
+C:\Users\jasbrown\Desktop\DSnA\trunk\JBrown_Wk-2_LinkedLists\bin\Debug\JBrown_Wk-2_LinkedLists.exe.config
+C:\Users\jasbrown\Desktop\DSnA\trunk\JBrown_Wk-2_LinkedLists\obj\Debug\JBrown_Wk-2_LinkedLists.exe
+C:\Users\jasbrown\Desktop\DSnA\trunk\JBrown_Wk-2_LinkedLists\obj\Debug\JBrown_Wk-2_LinkedLists.pdb
+C:\Users\jasbrown\Desktop\DSnA\trunk\JBrown_Wk-2_LinkedLists\bin\Debug\JBrown_Wk-2_LinkedLists.exe
+C:\Users\jasbrown\Desktop\DSnA\trunk\JBrown_Wk-2_LinkedLists\bin\Debug\JBrown_Wk-2_LinkedLists.pdb
+C:\Users\jasbrown\Desktop\DSnA\trunk\JBrown_Wk-2_LinkedLists\obj\Debug\JBrown_Wk-2_LinkedLists.csprojResolveAssemblyReference.cache

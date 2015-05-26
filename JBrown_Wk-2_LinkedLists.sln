@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBrown_Wk-2_LinkedLists", "JBrown_Wk-2_LinkedLists\JBrown_Wk-2_LinkedLists.csproj", "{6AC7CCCA-18A2-4F30-B768-4E08D8ED0145}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aesthetics", "C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Sorting_Algo\Aesthetics\Aesthetics.csproj", "{4FDBAD75-F3B9-473F-9FE5-2B45149FE416}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{6AC7CCCA-18A2-4F30-B768-4E08D8ED0145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AC7CCCA-18A2-4F30-B768-4E08D8ED0145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AC7CCCA-18A2-4F30-B768-4E08D8ED0145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FDBAD75-F3B9-473F-9FE5-2B45149FE416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDBAD75-F3B9-473F-9FE5-2B45149FE416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDBAD75-F3B9-473F-9FE5-2B45149FE416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDBAD75-F3B9-473F-9FE5-2B45149FE416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

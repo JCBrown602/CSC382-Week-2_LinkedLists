@@ -7,7 +7,7 @@
     <ProjectGuid>{6AC7CCCA-18A2-4F30-B768-4E08D8ED0145}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JBrown_Wk_2_LinkedLists</RootNamespace>
+    <RootNamespace>DblLinkedList</RootNamespace>
     <AssemblyName>JBrown_Wk-2_LinkedLists</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -41,12 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenData.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="MyLinkedList.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Sorting_Algo\Aesthetics\Aesthetics.csproj">
+      <Project>{4fdbad75-f3b9-473f-9fe5-2b45149fe416}</Project>
+      <Name>Aesthetics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

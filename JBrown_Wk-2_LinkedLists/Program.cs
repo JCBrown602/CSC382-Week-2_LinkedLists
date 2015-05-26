@@ -33,63 +33,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoublyLinkedList_JBrown
+using Aesthetics; // Custom class make console output more readable
+
+namespace DblLinkedList
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int numNodes = 10;
-            int itemToRemove = 0;
             Random randNum = new Random();
-            List<int> myList = new List<int>();
+            int nodeContent = 0;
+            int initNumNodes = 15; // Total nodes to generate randomly
+            int ceilingNum = 100; // Maximum value for any given node
 
-            for (int count = 0; count < numNodes; count++)
+            SpacerClass s = new SpacerClass('+');
+
+            MyLinkedList firstList = new MyLinkedList();
+
+            for (int count = 0; count < initNumNodes; count++)
             {
-                myList.Add(randNum.Next(1, 100));
+                nodeContent = randNum.Next(1,ceilingNum);
+                firstList.Insert(nodeContent);
             }
 
-            Console.WriteLine("******************");
+            Console.WriteLine("> Display the randomly generated nodes: ");
+            firstList.DisplayNodes();
+            s.showSpacer();
 
-            var s1 = Stopwatch.StartNew();
+            Console.WriteLine("> Inserting the value '11' at the end: ");
+            firstList.Insert("11");
+            firstList.DisplayNodes();
+            s.showSpacer();
 
-            myList.Sort();
-            foreach (var item in myList)
-            {
-                Console.WriteLine(" Item Value: {0}", item);
-            }
-            s1.Stop();
+            Console.WriteLine("> Inserting the value '99' at the end: ");
+            firstList.Insert("99");
+            firstList.DisplayNodes();
+            s.showSpacer();
+
+            Console.WriteLine("> Node inserted at index 17 (last node) is now: {0}", firstList.FindNode(17).NodeContent);
+            s.showSpacer();
+
+            Console.WriteLine("> Deleting Node at index 17: ");
+            firstList.DeleteNode(17);
+            firstList.DisplayNodes();
+            s.showSpacer();
+
+            Console.WriteLine("> The value at node 2 is: {0}", firstList.FindNode(2).NodeContent);
+            s.showSpacer();
 
 
-            Console.WriteLine("******************");
-            Console.WriteLine("> First element is: {0}", myList.ElementAt(0));
-            Console.WriteLine("******************");
-
-            itemToRemove = myList.ElementAt(0);
-            myList.Remove(itemToRemove);
-            Console.WriteLine("******************");
-            Console.WriteLine("> First element is NOW: {0}", myList.ElementAt(0));
-            Console.WriteLine("******************");
-
-            Console.WriteLine(((double)(s1.Elapsed.TotalMilliseconds * 1000000) / numNodes).ToString("0.00 ns"));
-            
-            Console.WriteLine("******************");
-            Console.WriteLine("> Sorted list: ");
-
-            foreach (var item in myList)
-            {
-                Console.WriteLine(" Item Value: {0}", item);
-            }
-            Console.WriteLine("******************"); 
-
-            Console.WriteLine("******************");
-            Console.WriteLine("> Max element is: {0}", myList.Max());
-            Console.WriteLine("******************");
-
-            Console.WriteLine("******************");
-            Console.WriteLine("> Min element is: {0}", myList.Min());
-            Console.WriteLine("******************"); 
         }
+
     }
 }
 

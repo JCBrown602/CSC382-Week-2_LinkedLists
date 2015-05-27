@@ -83,6 +83,9 @@ namespace DblLinkedList
 
             Console.WriteLine("> The minimum value is: {0}", firstList.MinimumNode());
             s.showSpacer();
+
+            Console.WriteLine("> The maximum value is: {0}", firstList.MaximumNode());
+            s.showSpacer();
             
         }
 

@@ -61,12 +61,12 @@ namespace DblLinkedList
             s.showSpacer();
 
             Console.WriteLine("> Inserting the value '11' at the end: ");
-            firstList.Insert("11");
+            firstList.Insert(11);
             firstList.DisplayNodes();
             s.showSpacer();
 
             Console.WriteLine("> Inserting the value '99' at the end: ");
-            firstList.Insert("99");
+            firstList.Insert(99);
             firstList.DisplayNodes();
             s.showSpacer();
 
@@ -81,7 +81,9 @@ namespace DblLinkedList
             Console.WriteLine("> The value at node 2 is: {0}", firstList.FindNode(2).NodeContent);
             s.showSpacer();
 
-
+            Console.WriteLine("> The minimum value is: {0}", firstList.MinimumNode());
+            s.showSpacer();
+            
         }
 
     }

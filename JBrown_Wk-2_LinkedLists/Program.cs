@@ -99,6 +99,12 @@ namespace DblLinkedList
             Console.WriteLine();
             firstList.DisplayNodesReverseHorizontal();
             s.ShowSpacer();
+            Console.WriteLine("> Press any key...");
+            s.ClearScreen('_', projectTitle);
+
+            Console.WriteLine("\n> Thanks!\n");
+            Console.WriteLine("> Press any key...");
+            s.ClearScreen('=', projectTitle);
 
             //projectTitle = "\t Sorting - Ascending";
             //s.ClearScreen('_', projectTitle);

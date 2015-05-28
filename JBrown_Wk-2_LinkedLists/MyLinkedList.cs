@@ -123,6 +123,7 @@ namespace DblLinkedList
         {
             Node tempNode = head;
 
+            Console.WriteLine();
             while (tempNode != null)
             {
                 if (tempNode.Next == null)
@@ -136,7 +137,6 @@ namespace DblLinkedList
                 }
                 tempNode = tempNode.Next;
             }
-            Console.WriteLine();
         }
 
         /// <summary>
@@ -203,11 +203,6 @@ namespace DblLinkedList
 
             while (tempNode != null)
             {
-                //if (tempNode.Next == null)
-                //{
-                //    break;
-                //}
-
                 if (minNode.NodeContent > tempNode.NodeContent)
                 {
                     minNode = tempNode;
@@ -215,7 +210,6 @@ namespace DblLinkedList
                 count++;
                 tempNode = tempNode.Next;
             }
-            //minNode = tempNode;
             return minNode.NodeContent;
         }
 
@@ -239,7 +233,6 @@ namespace DblLinkedList
                 count++;
                 tempNode = tempNode.Next;
             }
-            //minNode = tempNode;
             return minNode.NodeContent;
         }
 
@@ -269,9 +262,37 @@ namespace DblLinkedList
         /// </summary>
         public void SortList()
         {            
-            //Node tempNode = head;
-            //Node nextNode = tempNode.Next;
-            //int tempContent = tempNode.NodeContent;
+            Node tempNode = head;
+            Node nextNode = tempNode.Next;
+            int tempNodeContent = tempNode.NodeContent;
+            int counter = 0;
+
+            while (nextNode != null && counter < Count)
+            {
+                counter++;
+                Console.WriteLine("\n> DEBUG: Count is --> {0}", counter);
+
+                if (tempNode.NodeContent < nextNode.NodeContent)
+                {
+                    Console.WriteLine("> <{0}> is LESS than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+                }
+                else if (tempNode.NodeContent > nextNode.NodeContent)
+                {
+                    Console.WriteLine("> <{0}> is GREATER than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+                    tempNodeContent = nextNode.NodeContent;
+                    nextNode.NodeContent = tempNode.NodeContent;
+                    tempNode.NodeContent = tempNodeContent;
+                }
+                else
+                {
+                    Console.WriteLine("> <{0}> and <{1}> are EQUAL!", tempNode.NodeContent, nextNode.NodeContent);
+                }
+
+                tempNode = tempNode.Next;
+                nextNode = tempNode.Next;
+            }
+
+            Console.WriteLine();
                         
             //while (nextNode != null)
             //{

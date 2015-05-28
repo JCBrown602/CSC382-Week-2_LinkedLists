@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TempAestheticsClass\TempAestheticsClass.csproj">
-      <Project>{dd16177e-b0df-4cd4-8275-805a546f3ee7}</Project>
-      <Name>TempAestheticsClass</Name>
+    <ProjectReference Include="C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Sorting_Algo\Aesthetics\Aesthetics.csproj">
+      <Project>{4fdbad75-f3b9-473f-9fe5-2b45149fe416}</Project>
+      <Name>Aesthetics</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

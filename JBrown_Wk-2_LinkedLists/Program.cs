@@ -21,6 +21,7 @@ namespace DblLinkedList
     {
         static void Main(string[] args)
         {
+            string projectTitle = "\t Linked Lists - Week 2 - CSC382 - Jason Brown";
             Random randNum = new Random();
             int nodeContent = 0;
             int initNumNodes = 15; // Total nodes to generate randomly
@@ -29,8 +30,7 @@ namespace DblLinkedList
 
             // SpacerClass s = new SpacerClass('+');
             // 's' object allows for a spacer bar, header, and a clear screen method
-            TempAesthetics s = new TempAesthetics();
-            s.ShowSpacer();
+            Aesthetics.SpacerClass s = new Aesthetics.SpacerClass();
 
             // Create a new linked list - null at the moment
             MyLinkedList firstList = new MyLinkedList();
@@ -43,39 +43,39 @@ namespace DblLinkedList
             }
 
             // Shows a title at the top
-            s.DisplayHeader();
+            s.DisplayHeader('_', projectTitle);
 
             Console.WriteLine("> Display the randomly generated nodes: ");
             s.ShowSpacer();
             firstList.DisplayNodesVertical();
             s.ShowSpacer();
-            s.ClearScreen();
+            s.ClearScreen('_', projectTitle);
 
             Console.WriteLine("> Inserting the value '11' at the end: ");
             s.ShowSpacer();
             firstList.Insert(11);
             firstList.DisplayNodesHorizontal();
             s.ShowSpacer();
-            s.ClearScreen();
+            s.ClearScreen('_', projectTitle);
 
             Console.WriteLine("> Inserting the value '99' at the end: ");
             s.ShowSpacer();
             firstList.Insert(99);
             firstList.DisplayNodesHorizontal();
             s.ShowSpacer();
-            s.ClearScreen();
+            s.ClearScreen('_', projectTitle);
 
             Console.WriteLine("> Node inserted at index 17 (last node) is now: {0}", firstList.FindNode(17).NodeContent);
             s.ShowSpacer();
             firstList.DisplayNodesHorizontal();
-            s.ClearScreen();
+            s.ClearScreen('_', projectTitle);
 
             Console.WriteLine("> Deleting Node at index 17: ");
             firstList.DeleteNode(17);
             s.ShowSpacer();
             firstList.DisplayNodesHorizontal();
             s.ShowSpacer();
-            s.ClearScreen();
+            s.ClearScreen('_', projectTitle);
 
             firstList.DisplayNodesHorizontal();
 
@@ -95,8 +95,13 @@ namespace DblLinkedList
             Console.WriteLine("> The last node of the list is: {0}", firstList.FindNode(firstList.Count).NodeContent);
             s.ShowSpacer();
 
+            Console.WriteLine("> Reverse the list: ");
+            Console.WriteLine();
             firstList.DisplayNodesReverseHorizontal();
             s.ShowSpacer();
+
+            projectTitle = "\t Sorting - Ascending";
+            s.ClearScreen('_', projectTitle);
 
             firstList.SortList();
 

@@ -243,7 +243,7 @@ namespace DblLinkedList
         {
             Node tempNode = this.FindNode(Count);
 
-            for (int counter = this.Count; counter > 0; counter--)
+            for (int counter = (this.Count - 1); counter > 0; counter--)
             {
                 if (counter == 1)
                 {
@@ -260,54 +260,122 @@ namespace DblLinkedList
         /// <summary>
         /// Sorts the list in ascending order.
         /// </summary>
-        public void SortList()
-        {            
-            Node tempNode = head;
-            Node nextNode = tempNode.Next;
-            int tempNodeContent = tempNode.NodeContent;
-            int counter = 0;
+        //public void SortList()
+        //{
+        //    Node tempNode = head;
+        //    Node nextNode = tempNode.Next;
+        //    int tempNodeContent = tempNode.NodeContent;
+        //    int counter = 0;
 
-            while (nextNode != null && counter < Count)
-            {
-                counter++;
-                Console.WriteLine("\n> DEBUG: Count is --> {0}", counter);
+        //    while (nextNode != null && counter < Count)
+        //    {
+        //        counter++;
+        //        Console.WriteLine("\n> DEBUG: Count is --> {0}", counter);
 
-                if (tempNode.NodeContent < nextNode.NodeContent)
-                {
-                    Console.WriteLine("> <{0}> is LESS than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
-                }
-                else if (tempNode.NodeContent > nextNode.NodeContent)
-                {
-                    Console.WriteLine("> <{0}> is GREATER than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
-                    tempNodeContent = nextNode.NodeContent;
-                    nextNode.NodeContent = tempNode.NodeContent;
-                    tempNode.NodeContent = tempNodeContent;
-                }
-                else
-                {
-                    Console.WriteLine("> <{0}> and <{1}> are EQUAL!", tempNode.NodeContent, nextNode.NodeContent);
-                }
+        //        if (tempNode.NodeContent < nextNode.NodeContent)
+        //        {
+        //            Console.WriteLine("> <{0}> is LESS than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //        }
+        //        else if (tempNode.NodeContent > nextNode.NodeContent)
+        //        {
+        //            Console.WriteLine("> <{0}> is GREATER than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //            tempNodeContent = nextNode.NodeContent;
+        //            nextNode.NodeContent = tempNode.NodeContent;
+        //            tempNode.NodeContent = tempNodeContent;
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("> <{0}> and <{1}> are EQUAL!", tempNode.NodeContent, nextNode.NodeContent);
+        //        }
 
-                tempNode = tempNode.Next;
-                nextNode = tempNode.Next;
-            }
+        //        tempNode = tempNode.Next;
+        //        nextNode = tempNode.Next;
+        //    }
 
-            Console.WriteLine();
-                        
-            //while (nextNode != null)
-            //{
-            //    if (tempNode.NodeContent < nextNode.NodeContent && nextNode != null)
-            //    {
-            //        tempNode = tempNode.Next;
-            //    }
-            //    else
-            //    {
-            //        tempContent = tempNode.Next.NodeContent;
-            //        tempNode.Next.NodeContent = tempNode.NodeContent;
-            //        tempNode.NodeContent = tempContent;
-            //        tempNode = tempNode.Next;
-            //    }
-            //}
+        //    Console.WriteLine();
+        //}
+
+        /// <summary>
+        /// Sorts the list in ascending order.
+        /// </summary>
+        //public void SortList(ref MyLinkedList originalList)
+        //{
+        //    Node tempNode = originalList.head;
+        //    Node nextNode = tempNode.Next;
+        //    int tempNodeContent = tempNode.NodeContent;
+        //    int counter = 0;
+        //    bool sorted = false;
+        //    int sortedCount = 0;
+
+        //    //while (nextNode != null && counter < Count && sorted == false)
+        //    while (nextNode != null && sortedCount < originalList.size)
+        //    {
+        //        Console.WriteLine("\n> DEBUG: Count is --> {0}", counter);
+
+        //        if (tempNode.NodeContent < nextNode.NodeContent)
+        //        {
+        //            Console.WriteLine("> <{0}> is LESS than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //            tempNode = tempNode.Next;
+        //            if (tempNode.Next != null)
+        //            {
+        //                nextNode = tempNode.Next;
+        //            }
+        //            Console.WriteLine("> Current node: <{0}>, next node: <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //            counter++;
+        //            sortedCount++; 
+        //            Console.WriteLine(">\t Sorted count plus one: {0}", sortedCount);
+        //            // DEBUG:
+        //            Console.ReadKey();
+        //        }
+        //        else if (tempNode.NodeContent > nextNode.NodeContent)
+        //        {
+        //            Console.WriteLine("> <{0}> is GREATER than the next node <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //            tempNodeContent = nextNode.NodeContent;
+        //            if (nextNode != null)
+        //            {
+        //                nextNode.NodeContent = tempNode.NodeContent;
+        //                nextNode = tempNode.Next;
+        //            }
+        //            tempNode.NodeContent = tempNodeContent;
+        //            Console.WriteLine("> Current node: <{0}>, next node: <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //            sortedCount = 0; 
+        //            Console.WriteLine(">\t Sorted count: {0}", sortedCount);
+        //            counter++;
+        //            // DEBUG:
+        //            Console.ReadKey();
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("> <{0}> and <{1}> are EQUAL!", tempNode.NodeContent, nextNode.NodeContent);
+        //            Console.WriteLine("> Current node: <{0}>, next node: <{1}>.", tempNode.NodeContent, nextNode.NodeContent);
+        //            counter++;
+        //            sortedCount++; Console.WriteLine(">\t Sorted count plus one: {0}", sortedCount);
+        //            // DEBUG:
+        //            Console.ReadKey();
+        //        }
+
+        //        if (sortedCount == originalList.size)
+        //        {
+        //            sorted = true;
+        //        }
+
+        //        if (sorted != true && counter == originalList.size)
+        //        {
+        //            Console.WriteLine("> Hit original list size!!!");
+        //        }
+
+        //        tempNode = tempNode.Next;
+        //        //nextNode = nextNode.Next;
+        //    }
+        //    Console.WriteLine();
+        //    DisplayNodesHorizontal();
+        //    Console.WriteLine();
+        //    Console.WriteLine(">>> Original list size: {0}", originalList.size);
+        //}
+
+        public void SortList(ref MyLinkedList listToSort)
+        {
+            listToSort.Insert(77);
         }
     }
 }

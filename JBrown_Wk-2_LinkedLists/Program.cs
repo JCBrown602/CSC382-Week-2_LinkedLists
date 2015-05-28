@@ -100,13 +100,16 @@ namespace DblLinkedList
             firstList.DisplayNodesReverseHorizontal();
             s.ShowSpacer();
 
-            projectTitle = "\t Sorting - Ascending";
-            s.ClearScreen('_', projectTitle);
+            //projectTitle = "\t Sorting - Ascending";
+            //s.ClearScreen('_', projectTitle);
+            //firstList.SortList(ref firstList);
+            ////firstList.Insert(0);
+            //firstList.DisplayNodesReverseHorizontal();
+            //s.ShowSpacer();
 
-            firstList.SortList();
-
-            firstList.DisplayNodesReverseHorizontal();
-            s.ShowSpacer();
+            //firstList.SortList(ref firstList);
+            //firstList.DisplayNodesReverseHorizontal();
+            //s.ShowSpacer();
             
         }
 

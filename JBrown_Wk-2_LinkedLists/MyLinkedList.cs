@@ -4,26 +4,36 @@
  * 
  * Linked List - Using code from: http://channel9.msdn.com/Forums/TechOff/A-simple-and-pure-C-implementation-of-the-good-old-linked-list
  * Written by: Mauricio Feijo
- * Added find minimum and find maximum (and minor changes)
+ * Added find minimum and find maximum (and other minor changes)
  * 
  * Implementation
- * Implement a templated doubly-linked list in C++.  Your linked list class should implement the following functionality:
+ * Implement a templated doubly-linked list in C++.  Your linked list class should 
+ * implement the following functionality:
  * 
  * Find(dataToFind) – returns a pointer to the node whose key matches dataToFind.
- * Insert(newData) – inserts a new node at the end of the list with a key equal to newData
+ * Insert(newData) – inserts a new node at the end of the list with a key equal to 
+ * newData
  * Delete(delNode)- deletes the node that delNode points to from the list.
  * Minimum() – returns the minimum key in the list
- * Maximum() –returns the maximum key in the list
+ * Maximum() – returns the maximum key in the list
  * 
- * Your main program should instantiate, initialize and correctly demonstrate the functionality of the linked list.
+ * Your main program should instantiate, initialize and correctly demonstrate the 
+ * functionality of the linked list.
  * 
  * Lab Report
- * In Word or a similar word processing program, write a Lab Report including the following sections:
- * Introduction – in your own words, describe the structure and operations of linked lists.
- * Programmer’s Guide  – Provide detailed documentation describing your implementation of linked lists. Describe the structure of the list class (class diagrams are awesome), and describe the meaning and operation of each of its member variables and methods. For each member function, give a usage example.
+ * In Word or a similar word processing program, write a Lab Report including the 
+ * following sections:
+ * Introduction – in your own words, describe the structure and operations of linked 
+ * lists.
+ * Programmer’s Guide  – Provide detailed documentation describing your implementation 
+ * of linked lists. Describe the structure of the list class (class diagrams are awesome), 
+ * and describe the meaning and operation of each of its member variables and methods. 
+ * For each member function, give a usage example.
  * 
  * Submission
- * Submit a *.zip file containing your lab report and code project folder to the drop-box associated with this assignment.  Name the *.zip file with your Last Name, and the week.  For example, my submission file would be:
+ * Submit a *.zip file containing your lab report and code project folder to the 
+ * drop-box associated with this assignment.  Name the *.zip file with your Last Name, 
+ * and the week.  For example, my submission file would be:
  * 
  * GordonWeek2.zip
  */

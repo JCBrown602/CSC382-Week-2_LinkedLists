@@ -5,7 +5,7 @@
  * Linked List
  * 
  * Driver program to demonstrate features.
- * 
+ *
  */
 
 using System;
@@ -87,6 +87,10 @@ namespace DblLinkedList
             s.ShowSpacer();
 
             Console.WriteLine("> The maximum value is: {0}", firstList.MaximumNode());
+            s.ShowSpacer();
+
+            // FindNode returns a node key/index
+            Console.WriteLine("> Value to the right of Node 4: {0}", firstList.FindNode(2).Next.NodeContent);
             s.ShowSpacer();
 
             Console.WriteLine("> The size of the list is: {0}", firstList.Count);
